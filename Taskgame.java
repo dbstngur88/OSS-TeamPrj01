@@ -30,8 +30,8 @@ public class DoubleRps {
                 String Comrps = rps[rpsindex];                    //선택된 정보를 Comrps에 저장
                 
                 // 사용자가 낸 묵찌빠 정보와 컴퓨터가낸 묵찌빠 정보를 비교 
-	            switch(input) {
-	              	case "가위" : 
+	        switch(input) {
+	        	case "가위" : 
 	               		if(Comrps == "가위") {
 	               			System.out.println("비겼습니다~~ 아쉽네요");
 	               		}else if(Comrps == "바위"){
