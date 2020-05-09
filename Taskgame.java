@@ -29,7 +29,36 @@ public class DoubleRps {
                 int rpsindex = (int)(Math.random) * rps.length);  //Math.random()을 통해 난수로 컴퓨터의 묵찌빠 정보 생성
                 String Comrps = rps[rpsindex];                    //선택된 정보를 Comrps에 저장
                 
-            }
-  
+                // 사용자가 낸 묵찌빠 정보와 컴퓨터가낸 묵찌빠 정보를 비교 
+	            switch(input) {
+	              	case "가위" : 
+	               		if(Comrps == "가위") {
+	               			System.out.println("비겼습니다~~ 아쉽네요");
+	               		}else if(Comrps == "바위"){
+	               			System.out.println("졌어요 ㅠㅠ 다음엔 이길거에요");
+	               		}else if(Comrps == "보") {
+	               			System.out.println("이겼어요!!!!!");
+	               		}; 
+	               		break;
+	               	case "바위" : 
+	               		if(Comrps == "바위") {
+	               			System.out.println("비겼습니다~~ 아쉽네요");
+	               		}else if(Comrps == "보"){
+	               			System.out.println("졌어요 ㅠㅠ 다음엔 이길거에요");
+	               		}else if(Comrps == "가위") {
+	               			System.out.println("이겼어요!!!!!");
+	               		}; 
+	               		break;
+	               	case "보" : 
+	               		if(Comrps == "보") {
+	               			System.out.println("비겼습니다~~ 아쉽네요");
+	               		}else if(Comrps == "가위"){
+	               			System.out.println("졌어요 ㅠㅠ 다음엔 이길거에요");
+	               		}else if(Comrps == "바위") {
+	               			System.out.println("이겼어요!!!!!");
+	               		}; 
+	               		break;
+	            }//switch()
+            }//while()
     }
 }
