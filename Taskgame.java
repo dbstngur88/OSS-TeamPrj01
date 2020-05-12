@@ -91,6 +91,13 @@ public class DoubleRps   {
                  System.out.println("잘못 입력했습니다. 다시입력해주세요.\n");
                  continue;
                 }
+		    
+		if(user == 0)
+                {
+                	System.out.println("게임을 종료합니다."); //게임을 종료
+                	System.exit(0);
+                }
+		    
                 display(user,com);
                 if(user != com) //판정이 결정되면 루프 이탈
                 	break;
@@ -111,7 +118,13 @@ public class DoubleRps   {
                 	 
                 	 user = readin.nextInt();
                 	 com = (int)(Math.round(Math.random()*2)+1);
-                	 
+			
+			if(user<=0 || 3<user) //유효하지 않은 값 입력
+                        {
+                         System.out.println("잘못 입력했습니다. 1에서 3 사이의 수를 입력해주세요.\n");
+                         continue;
+                        }
+                  	 
                 	 display(user,com); //상태 출력
                 	 if(user != com)
                 		 judge = judgement(user,com);
